@@ -289,7 +289,7 @@ func resourceIBMPIInstanceCreate(d *schema.ResourceData, meta interface{}) error
 	//log.Printf("the number of instances is %d", len(*pvm))
 
 	if err != nil {
-		return fmt.Errorf("Failed to provision the instance")
+		return fmt.Errorf("Failed to provision the instance: %s", err)
 	} else {
 		log.Printf("Printing the instance info %+v", &pvm)
 	}
