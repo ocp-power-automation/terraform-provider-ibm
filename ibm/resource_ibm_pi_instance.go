@@ -670,7 +670,7 @@ func isPIInstanceRefreshFunc(client *st.IBMPIInstanceClient, id, powerinstanceid
 		}
 
 		//if pvm.Health.Status == helpers.PIInstanceHealthOk {
-		if *pvm.Status == helpers.PIInstanceAvailable && pvm.Health.Status == helpers.PIInstanceHealthOk {
+		if *pvm.Status == helpers.PIInstanceAvailable {
 			log.Printf("The health status is now ok")
 			return pvm, helpers.PIInstanceAvailable, nil
 
